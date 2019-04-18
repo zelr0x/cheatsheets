@@ -1,8 +1,45 @@
-# Short version
+# Relevant 
+## Data models
+Sorted by bitness (asc), \*nix and Windows only
+<table>
+  <tr>
+    <th></th>
+    <th>char</th>
+    <th>short</th>
+    <th>int</th>
+    <th>long</th>
+    <th>long logn</th>
+    <th>pointer</th>
+    <th>OS</th>
+  </tr>
+  <tr>
+    <td>ILP32</td>
+    <td rowspan="3" align="center">8</td>
+    <td rowspan="3" align="center">16</td>
+    <td rowspan="3" align="center">32</td>
+    <td rowspan="2" align="center">32</td>
+    <td rowspan="3" align="center">64</td>
+    <td align="center">32</td>
+    <td>*unix, Windows</td>
+  </tr>
+  <tr>
+    <td>LLP64</td>
+    <td rowspan="2" align="center">64</td>
+    <td>Windows</td>    
+  </tr>
+  <tr>
+    <td>LP64</td>
+    <td align="center">64</td>
+    <td>*nix</td>    
+  </tr>
+</table>
 
-# Full version
+## Limits
 
+
+# All data models
 ## Data model / OS
+Sorted by bitness first (desc) and then by relevance (desc)
 <table>
   <tr>
     <th>Model</th>
@@ -29,7 +66,7 @@
   <tr>
     <td><b>ILP32</b></td>
     <td rowspan="2" align="center">32</td>
-    <td>Windows, *nix</td>
+    <td>Most of *nix, Windows</td>
   </tr>
   <tr>
     <td>LP32</td>
@@ -45,6 +82,7 @@
 </table>
 
 ## Type size / Data model
+Sorted by bitness (asc)
 <table>
   <tr>
     <th></th>
@@ -61,7 +99,7 @@
     <td rowspan="7" align="center">16</td>
     <td rowspan="3" align="center">16</td>
     <td rowspan="5" align="center">32</td>
-    <td rowspan="4" align="center"></td>
+    <td rowspan="4" align="center">&#x2717;</td>
     <td align="center">16</td>
   </tr>
   <tr>
@@ -72,24 +110,24 @@
     <td>LP32</td>
   </tr>
   <tr>
-    <td>ILP32</td>
+    <td><b>ILP32</b></td>
     <td rowspan="3" align="center">32</td>
   </tr>
   <tr>
-    <td>LLP64</td>
-    <td colspan="2" align="center">64</td>
+    <td><b>LLP64</b></td>
+    <td colspan="2" rowspan="4" align="center">64</td>
   </tr>
   <tr>
-    <td>LP64</td>
-    <td colspan="3" align="center">64</td>
+    <td><b>LP64</b></td>
+    <td rowspan="3" align="center">64</td>   
   </tr>
   <tr>
     <td>ILP64</td>
-    <td colspan="4" align="center">64</td>
+    <td rowspan="2" align="center">64</td>
   </tr>
   <tr>
     <td>SILP64</td>
-    <td colspan="5" align="center">64</td>
+    <td align="center">64</td>
   </tr>
 </table>
 
