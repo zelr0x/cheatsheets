@@ -39,7 +39,7 @@ Type | Size (b) | Size (10) | MIN (10) | MAX (10) | MAX (16)
 :---: | :---: | ---: | ---: | ---: | ---:
 `signed char` | 8 | 256 | `SCHAR_MIN`<br />-128 | `SCHAR_MAX`<br />127 | 0x7f
 `unsigned char` | 8 | 256 | <br />0 | `UCHAR_MAX`<br />255 | 0xff
-`char` | 8 | 256 | `CHAR_MIN`<br />-128<br />0 (MSVC: `/J`<br />GCC/Clang: `-funsigned-char`) | `CHAR_MAX`<br />127<br />255 (flag) | 0x7f<br />0xff (flag)
+`char` | 8 | 256 | `CHAR_MIN`<br />-128<br />0 if flag is set<br />Flag:<br />`/J`&nbsp;(MSVC)<br />`-funsigned-char` (GCC/Clang) | `CHAR_MAX`<br />127<br />255 (flag) | 0x7f<br />0xff (flag)
 `short` | 16 | 65536 | `SHRT_MIN`<br />-32768 | `SHRT_MAX`<br />32767 |0x7fff
 `unsigned short` | 16 | 65536 | <br />0 | `USHRT_MAX`<br />65535 | 0xffff
 `int` | 32 | 4294967296 | `INT_MIN`<br />-2147483648 | `INT_MAX`<br />2147483647 | 0x7fffffff
