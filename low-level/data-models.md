@@ -8,7 +8,7 @@
     <th>short</th>
     <th>int</th>
     <th>long</th>
-    <th>long logn</th>
+    <th>long long</th>
     <th>pointer</th>
     <th>OS</th>
   </tr>
