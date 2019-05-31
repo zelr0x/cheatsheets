@@ -1,3 +1,5 @@
+## Object.create(proto, [propertiesObj])
+Creates a new object using the provided object (proto parameter) as the prototype of that created object and, optionally, propertiesObj as its properties:
 ```js
 const dog = {
     bark: function() {
