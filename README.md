@@ -1,2 +1,4 @@
 # cheatsheets
-Useful info, usually in tables, all in one place
+Tables, notes and things like that
+
+A lot of it is a work-in-progress
