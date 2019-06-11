@@ -21,6 +21,6 @@ To be in the first normal form:
 ## 2NF
 To be in the second normal form:
 1. The table must be in the 1NF
-2. All non-primary attributes in a table must functionally depend on a the whole of every candidate key (attributes can't partially depend on the candidate keys). Relevant only for tables with compound primary keys
-    * If primary key is not compound, that table is already satisfies that requirment
-    * If any field depends only on a part of a primary key, an according attribute should be extracted to a separate table. If field A depends completely on B means that if B is known, A can be found.
+2. All non-primary attributes in a table must functionally depend on a the whole of every candidate key (attributes can't partially depend on the candidate keys)
+    * If primary key is not compound, that table already satisfies that requirment
+    * If any attribute depends only on a part of a primary key, an according attribute should be extracted to a separate table. If an attribute A functionally depends on the whole of B, than A can always be found if B is given
