@@ -5,7 +5,7 @@ __Runnable__ (functional interface: `run()`) encapsulates a task that runs async
 __Callable<V>__ (functional interface: `call()`) similar to a Runnable, but it returns a value. The type parameter is the type of the returned value. To convert `Runnable` to `Callable` (returning `null`) - use static `Executors.callable(Runnable)`
 
 
-__Future__ (interface) holds the result of an asynchronous computation. You start a computation, give someone the Future object, and forget about it. The owner of the Future object can obtain the result when it is ready. To retrieve the result, Future has blocking `get()` methods (with and without timeout parameter; the one with the timer throws `TimeoutException`). It also has booleans `isDone()` and `isCancelled()`.
+__Future__ (interface) holds the result of an asynchronous computation. You start a computation, give someone the Future object, and forget about it. The owner of the Future object can obtain the result when it is ready. To retrieve the result, Future has blocking `get()` methods (with and without timeout parameter; the one with the timer throws `TimeoutException`). It also has booleans `isDone()` and `isCancelled()`. Both `get` methods can throw `InterruptedException` or `ExecutionException`
 
 
 A task can be cancelled with `task.cancel()` only if mayInterrupt parameter is set to true. If a Future object does not know on which thread the task is executed, or if the task does not monitor the interrupted status of the thread on which it executes, cancellation will have no effect.
@@ -56,6 +56,12 @@ List<Future<T>> executor.invokeAll(Collection<? extends Callable<T>> tasks)
 __ForkJoinPool__
 
 __ForkJoinTask<V>__ (_abstract_, implements `Future<V>`) –  base class for tasks that run within a ForkJoinPool; a thread-like entity that is much lighter weight than a normal thread. Key methods: `fork()` and `join()` or wrappers such as `invoke()`
+
+__fork__ – arranges to asynchronously execute this task in the pool the current task is running in, if applicable, or using the `ForkJoinPool.commonPool()` if not `inForkJoinPool()`
+
+__join__ – returns the result of the computation when it is done. This method differs from get() in that abnormal completion results in `RuntimeException` or `Error` instead of exceptions that `get()` throws
+
+__invoke__ – starts performing this task, awaits, and returns its result, OR throws a `RuntimeException` or `Error` if the underlying computation did so
 
 __RecursiveAction__ (_abstract_, extends `ForkJoinTask<Void>`): `protected abstract void compute()`, tasks of that type always return null
 
