@@ -1,16 +1,14 @@
-__Attribute__ – column
+__Attribute__ – column, sometimes also called a field, but field can mean a different thing. Some people mean column properties like data type when they say attribute.
 
-__Tuple__ – row, record
+__Tuple__ – row, sometimes also called a record, but record can mean a different thing.
 
-__Field__ – cell
+__Data domain__ – range of possible values (all the values which a data element may contain) of an attribute; basically a data type.
 
-__Data domain__ – range of possible values (all the values which a data element may contain) of an attribute
+__Candidate key__ – one or more attributes that are non-empty (have values) and don't repeat inside a table (unique value for each tuple). Unique set of prime attributes.
 
-__Candidate key__ – one or more attributes that are non-empty (have values) and don't repeat inside a table (unique value for each tuple). Unique set of prime attributes
+__Prime attribute__ – an attribute that is a part of any candidate key.
 
-__Prime attribute__ – an attribute that is a part of any candidate key
-
-__Primary key__ – a candidate key that is most suitable for the purpose of being primary. Usually with the least number of attributes or / and with the smalles memory footprint
+__Primary key__ – a candidate key that is most suitable for the purpose of being primary. Usually with the least number of attributes or / and with the smalles memory footprint.
 
 ## 1NF
 To be in the first normal form:
